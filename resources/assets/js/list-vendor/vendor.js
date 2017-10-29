@@ -2,7 +2,7 @@ require('./../bootstrap');
 
 window.Vue = require('vue');
 
-Vue.component('sidebar', require('./components/sidebar'));
+// Vue.component('sidebar', require('./components/sidebar'));
 Vue.component('vendor', require('./components/vendor'))
 
 
@@ -15,7 +15,7 @@ const app = new Vue({
     		],
             input: {
                 start: 0,
-                length: 21,
+                length: 9,
                 columns: [
                     { data: 'nama', name: 'nama', searchable: true, orderable: false, search: {value:'', regex: false}},
                     { data: 'kategori', name: 'id', searchable: false, orderable: false, search: {value:'', regex: false}},
@@ -33,12 +33,16 @@ const app = new Vue({
                 value: ''
             },
             recordsTotal: '',
+            categories: [],
+            categori: [],
+            min_max_harga: [],
+            harga_max: 0,
     	}
     },
     methods:{
     	getData(){
     		var vm = this
-    		axios.get(this.buildUrl())
+    		axios.get(this.buildUrl(), {params: {categori: this.categori}})
     			.then(res => {
                     Vue.set(vm.$data, 'vendor', res.data.data)
     				Vue.set(vm.$data, 'recordsTotal', res.data.recordsTotal)
@@ -80,14 +84,35 @@ const app = new Vue({
             if((parseInt(this.input.start) + parseInt(this.input.length)) < parseInt(this.recordsTotal)){                this.input.start = parseInt(this.input.start) + parseInt(this.input.length);
                 this.getData();
             }
-            console.log("Next Click")
-            console.log(this.recordsTotal)
+        },
+        getKategori(){
+            var vm = this
+            axios.get('kategori')
+                .then(res => {
+                    Vue.set(vm.$data, 'categories', res.data)
+                })
+                .catch(e => {
+                    console.log(e.response)
+                })
+        },
+        getHarga(){
+            var that = this
+            axios.get('max-min-harga').then(res => {
+                Vue.set(that.$data, 'min_max_harga', res.data)
+                // console.log(that.min_max_harga)
+            }).catch(e => {
+                console.log(e)
+            })
         }
     },
     beforeMount(){
-    	this.getData()
+        this.getData()
+    	this.getKategori()
+        this.getHarga();
     },
-    created(){
-    	this.getData();
-    }
+    watch:{
+        categori(){
+            this.getData();
+        }
+    },
 });

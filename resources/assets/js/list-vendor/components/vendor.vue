@@ -2,7 +2,7 @@
 	<!--  ==========  -->
     <!--  = Single Product =  -->
     <!--  ==========  -->
-    <div :class="['span3 isotope--target filter', vendor.filter]" data-price="1719" data-popularity="2">
+    <div :class="['span3']">
         <div class="product">
             <div class="product-inner">
 	            <!-- <div class="stamp red">Sold</div> -->

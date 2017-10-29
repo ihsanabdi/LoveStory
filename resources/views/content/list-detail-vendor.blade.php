@@ -147,5 +147,5 @@
 @endsection
 
 @push('js')
-    <script src="{{ url('js/vendor.js') }}" type="text/javascript"></script>
+    <script src="{{ url('js/detail-vendor.js') }}" type="text/javascript"></script>
 @endpush

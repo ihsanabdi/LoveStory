@@ -187,7 +187,10 @@
     <!--  = Google Maps API =  -->
     <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="{{url('js/goMap/js/jquery.gomap-1.3.2.min.js')}}"></script>
-
+    
+    {{-- SlimScroll --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    
     <!--  = Custom JS =  -->
     <script src="{{url('js/custom.js')}}" type="text/javascript"></script>
 

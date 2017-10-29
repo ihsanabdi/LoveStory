@@ -17,7 +17,11 @@ class VendorController extends Controller
     {
         if(request()->wantsJson()){
             $data = [];
-            $vendor = Vendor::all();
+            if(request()->categori){
+                $vendor = Vendor::whereIn('vend_ktgr_id', request()->categori)->get();
+            }else{
+                $vendor = Vendor::all();
+            }
             foreach ($vendor as $key => $value) {
                 $row = [];
 
@@ -67,7 +71,7 @@ class VendorController extends Controller
     public function show($id, $params)
     {
         $vendor = Vendor::find($id);
-        return view('content.detail-vendor', compact('vendor'));
+        return view('content.list-detail-vendor');
     }
 
     /**

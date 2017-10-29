@@ -595,4 +595,9 @@ jQuery(document).ready(function($) {
     //  = Last but not the least - trigger the page scroll and resize = 
     //  ========== 
     $(window).trigger("scroll").trigger("resize");
+
+    // Scroll Categori
+    $('#filter-kategori').slimScroll({
+        height: '300px'
+    });
 });
