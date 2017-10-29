@@ -44,11 +44,8 @@
     <script src="{{url('js/modernizr.custom.56918.js')}}"></script>
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{url('images/apple-touch/144.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{url('images/apple-touch/114.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{url('images/apple-touch/72.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{url('images/apple-touch/57.png')}}">
-    <link rel="shortcut icon" href="{{url('images/apple-touch/57.png')}}">
+    <link rel="shortcut icon" href="{{ url('images/logo.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('images/logo.ico') }}" type="image/x-icon">
   </head>
 
     <body class="">
@@ -63,7 +60,7 @@
                 <div class="row">
                     <div class="span1">
                         <div class="higher-line">
-                            <img src="images/logo.jpg" width="100%">
+                            <img src="{{ url('images/logo.jpg') }}" width="100%">
                         </div>
                     </div>
                     <div class="span4">
