@@ -86,7 +86,7 @@ Shahih Bukhari 6:19 Tirmidhi</i></h3></center><br><br>
                     <div class="carouFredSel" data-nav="tweets" data-autoplay="false">
                         
                         <!--  ==========  -->
-                        <!--  = Slide =  -->
+                        <!--  = Slide = vvb  -->
                         <!--  ==========  -->
                         <div class="slide">
                             <div class="row">
