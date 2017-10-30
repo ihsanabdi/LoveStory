@@ -11,6 +11,11 @@ class DetailVendor extends Model
 
     public function vendor()
     {
-        return $this->hasMany(Vendor::class, 'dave_vend_id');
+        return $this->belongsTo(Vendor::class, 'dave_vend_id');
+    }
+
+    public function jenis()
+    {
+    	return $this->belongsTo(JenisVendor::class, 'dave_jenis');
     }
 }

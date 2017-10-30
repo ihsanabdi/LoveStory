@@ -9,6 +9,8 @@ class Kategori extends Model
     protected $table = 'kategori';
     protected $primaryKey = 'ktgr_id';
 
+    // protected $fillable = ['ktgr_id', 'ktgr_nama'];
+
     public function galeris()
     {
         return $this->hasMany(Kategori::class, 'glr_ktgr_id');

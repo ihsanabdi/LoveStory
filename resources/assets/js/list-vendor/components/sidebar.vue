@@ -18,7 +18,7 @@
                 </div>
                 <div id="filterOne" class="accordion-body collapse in">
                     <div class="accordion-inner">
-                        <a href="#" v-for="kategori in categories" :data-target="kategori.target" :data-value="kategori.id" class="selectable" @click.stop="select($event)"><i class="box"></i> {{ kategori.title }}</a>
+                        <a href="#" v-for="kategori in categories" :data-target="kategori.target" :data-value="kategori.id" class="selectable" ><i class="box"></i> {{ kategori.title }}</a>
                     </div>
                 </div>
             </div> <!-- /categories -->

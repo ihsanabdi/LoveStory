@@ -26,7 +26,9 @@ Route::get('kontak', function(){
 
 Route::get('vendor', 'VendorController@index')->name('vendor');
 
-Route::get('detail-vendor/{id}/{params}', 'VendorController@show')->name('detail-vendor');
+Route::get('vendor/{id}/{params}', 'VendorController@show')->name('vendor.show');
+Route::get('detail-vendor/{id}', 'DetailVendorController@index')->name('detail-vendor');
+Route::get('jenis-vendor', 'JenisVendorController@index')->name('jenis-vendor');
 
 
 
@@ -56,4 +58,10 @@ Route::get('checkout-step-4', function(){
 });
 
 Route::get('kategori', 'KategoriController@index');
+
+Route::get('max-min-harga', function(){
+	$data['max'] = App\Models\DetailVendor::max('dave_harga');
+	$data['min'] = App\Models\DetailVendor::min('dave_harga');
+	return response()->json($data);
+});
 

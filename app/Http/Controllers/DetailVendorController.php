@@ -2,32 +2,46 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailVendor;
 use Illuminate\Http\Request;
-use App\Models\Kategori;
+use Yajra\DataTables\Facades\DataTables;
 
-class KategoriController extends Controller
+class DetailVendorController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         if(request()->wantsJson()){
-            $kategori = Kategori::select('ktgr_id', 'ktgr_nama')->get();
             $data = [];
-            foreach ($kategori as $key => $value) {
+            if(request()->jenis){
+                $detail = DetailVendor::with('jenis')
+                    ->whereIn('dave_jenis', request()->jenis)
+                    ->where('dave_vend_id', $id)
+                    ->get();
+            }else{
+                $detail = DetailVendor::with('jenis')
+                    ->where('dave_vend_id', $id)
+                    ->get();
+            }
+            
+            foreach ($detail as $key => $value) {
                 $row = [];
-                $row['id'] = $value->ktgr_id;
-                $row['title'] = $value->ktgr_nama;
-                // $row['target'] = '.filter-'.str_slug($value->ktgr_nama, '-');
+                $row['id'] = $value->dave_id;
+                $row['nama'] = $value->jenis->jenvend_nama;//'Nama';//$value->vendor;
+                $row['jenis'] = $value->jenis->jenvend_id;
+                $row['deskripsi'] = $value->dave_deskripsi;
+                $row['harga'] = 'Rp.'.number_format($value->dave_harga, 2, ',', '.');
+                $row['gambar'] = (file_exists( public_path() .$value->dave_foto))? url($value->dave_foto): url('images/vendor/default.jpg');
+                //$row['foto'] = (file_exists( public_path() .$value->vend_foto))? $value->vend_foto: 'images/vendor/default.jpg';
                 $data[] = $row;
             }
-            return response()->json($data, 200);
+
+            return DataTables::of($data)->make(true);
         }
-        // return Kategori::all();
-        return 'Kategori';
     }
 
     /**
