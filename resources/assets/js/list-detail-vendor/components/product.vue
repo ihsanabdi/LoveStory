@@ -11,7 +11,7 @@
                             <a href="javascript::void(0)"><img width="540" height="374" :alt="product.nama" :src="product.gambar" /></a>
                             <div class="img-overlay">
                                 <a class="btn more btn-primary" href="javascript::void(0)">More</a>
-                                <a class="btn buy btn-danger" href="#">Add to Cart</a>
+                                <a class="btn buy btn-danger" @click="addCart">Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -34,5 +34,16 @@
 	export default{
 		name: 'product',
 		props: ['product'],
+        methods:{
+            addCart(){
+                axios.post('/cart/store', {params: {id: this.product.id}})
+                    .then(res => {
+                        console.log(res)
+                    })
+                    .catch(e => {
+                        console.log(e)
+                    })
+            }
+        }
 	}
 </script>

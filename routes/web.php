@@ -65,3 +65,14 @@ Route::get('max-min-harga', function(){
 	return response()->json($data);
 });
 
+
+Route::group(['prefix' => 'cart'], function(){
+	// Route::get('index', ['as'=>'cart.index', 'uses'=>'CartController@index']);
+	
+	// Route::post('destroy', ['as'=>'cart.destroy', 'uses'=>'CartController@destroy']);
+	// Route::post('clear', ['as'=>'cart.clear', 'uses'=>'CartController@clear']);
+	// Route::post('total', ['as'=>'cart.total', 'uses'=>'CartController@total']);
+});
+Route::post('cart/store', function(){
+	return response()->json(['Hello'], 200);
+});

@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Utilities\Helper;
+use App\Models\Utilities\HelperInterface;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class Kategori extends Model implements HelperInterface
 {
+    use Helper;
+    
     protected $table = 'kategori';
     protected $primaryKey = 'ktgr_id';
 

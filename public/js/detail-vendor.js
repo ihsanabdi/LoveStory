@@ -42786,8 +42786,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	name: 'product',
-	props: ['product']
+    name: 'product',
+    props: ['product'],
+    methods: {
+        addCart: function addCart() {
+            axios.post('/cart/store', { params: { id: this.product.id } }).then(function (res) {
+                console.log(res);
+            }).catch(function (e) {
+                console.log(e);
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -42815,7 +42824,25 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _vm._m(0)
+              _c("div", { staticClass: "img-overlay" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn more btn-primary",
+                    attrs: { href: "javascript::void(0)" }
+                  },
+                  [_vm._v("More")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn buy btn-danger",
+                    on: { click: _vm.addCart }
+                  },
+                  [_vm._v("Add to Cart")]
+                )
+              ])
             ])
           ])
         ]),
@@ -42843,27 +42870,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img-overlay" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn more btn-primary",
-          attrs: { href: "javascript::void(0)" }
-        },
-        [_vm._v("More")]
-      ),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn buy btn-danger", attrs: { href: "#" } }, [
-        _vm._v("Add to Cart")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
