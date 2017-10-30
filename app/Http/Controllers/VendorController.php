@@ -18,18 +18,20 @@ class VendorController extends Controller
         if(request()->wantsJson()){
             $data = [];
             if(request()->categori){
-                $vendor = Vendor::whereIn('vend_ktgr_id', request()->categori)->get();
+                $vendor = Vendor::with('kategori')//->select('vend_id', 'vend_nama', 'vend_foto')
+                    ->whereIn('vend_ktgr_id', request()->categori)
+                    ->get();
             }else{
-                $vendor = Vendor::all();
+                $vendor = Vendor::with('kategori')//->select('vend_id', 'vend_nama', 'vend_foto')
+                    ->get();
             }
-            foreach ($vendor as $key => $value) {
+            foreach ($vendor as $value) {
                 $row = [];
 
                 $row['id'] = $value->vend_id;
                 $row['nama'] = $value->vend_nama;
-                $row['kategori'] = $value->kategori->ktgr_nama;
+                $row['kategori'] = $value->kategori->ktgr_nama;//['ktgr_nama'];
                 $row['foto'] = (file_exists( public_path() .$value->vend_foto))? $value->vend_foto: 'images/vendor/default.jpg';
-                $row['filter'] = 'filter-'.str_slug($value->kategori->ktgr_nama, '-');
                 // $row['url'] = route('detail-vendor', ['params'=>str_slug($value->vend_nama, '-')]);
                 $row['url'] = action('VendorController@show', ['params'=>str_slug($value->vend_nama, '-'),'id'=>$value->vend_id]);
 

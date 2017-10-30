@@ -26,7 +26,7 @@
 @endsection
 
 @section('content')
-    <div class="container" id="list-vendor">
+    <div class="container" id="list-detail-vendor">
         <div class="push-up blocks-spacer">
             <div class="row">
 
@@ -47,17 +47,16 @@
                         <!--  ==========  -->
                         <div class="accordion-group" id="tourStep2">
                             <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" href="#filter-kategori">Categories <b class="caret"></b></a>
+                                <a class="accordion-toggle" data-toggle="collapse" href="#filter-jenis">Jenis <b class="caret"></b></a>
                             </div>
-                            <div id="filter-kategori" class="accordion-body collapse in">
+                            <div id="filter-jenis" class="accordion-body collapse in">
                                 <div class="accordion-inner">
-                                    <label v-for="(kategori, idx) in categories" :for="`kategori_${kategori.id}`">
-                                        <input type="checkbox" :id="`kategori_${kategori.id}`" v-model="categori"  :value="kategori.id" >@{{ kategori.title }}    
+                                    <label v-for="(value, idx) in data_jenis" :for="`value_${value.id}`">
+                                        <input type="checkbox" :id="`value_${value.id}`" v-model="jenis"  :value="value.id" >@{{ value.nama }}    
                                     </label>
-                                    {{-- <a href="#" v-for="kategori in categories" :data-target="kategori.target" :data-value="kategori.id" class="selectable" @click.stop="select($event)"><i class="box"></i> @{{ kategori.title }}</a> --}}
                                 </div>
                             </div>
-                        </div> <!-- /categories -->
+                        </div>
 
                         <!--  ==========  -->
                         <!--  = Prices slider =  -->
@@ -65,14 +64,13 @@
                         <div class="accordion-group">
                             <div class="accordion-heading">
                                 <a class="accordion-toggle" data-toggle="collapse" href="#filterPrices">Price <b class="caret"></b></a>
-                                @{{ harga_max }}
                             </div>
                             <div id="filterPrices" class="accordion-body in collapse">
                                 <div class="accordion-inner with-slider">
                                     <div class="jqueryui-slider-container">
                                         <div id="pricesRange"></div>
                                     </div>
-                                    <input type="text" v-model="harga_max" data-initial="432" class="max-val pull-right" disabled />
+                                    <input type="text"  data-initial="432" class="max-val pull-right" disabled />
                                     <input type="text" data-initial="99" class="min-val" readonly="" />
                                 </div>
                             </div>
@@ -94,7 +92,7 @@
                     <div class="underlined push-down-20">
                         <div class="row">
                             <div class="span4">
-                                <h3><span class="light">All</span> Vendor</h3>
+                                <h3><span class="light">All</span> Product</h3>
                             </div>
                             <div class="span5 align-right sm-align-left">
                                 <div class="form-inline sorting-by" id="tourStep4">
@@ -108,10 +106,10 @@
                                         <option value='{"sortBy":"popularity", "sortAscending":"false"}'>By Popularity (High to Low) &darr;</option>
                                     </select>
                                 </div>
-                                <div class="view-switch">
+                                {{-- <div class="view-switch">
                                     <a href="#" class="btn btn-primary"><i class="icon-th"></i></a>
                                     <a href="#" class="btn"><i class="icon-list"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div> <!-- /title -->
@@ -119,10 +117,10 @@
                     <!--  ==========  -->
                     <!--  = Products =  -->
                     <!--  ==========  -->
-                    <div class="row popup-products">
+                    <div class="row">
                         <div id="" class="isotope-container">
                             
-                            <vendor v-for="value in vendor" :key="value.id" v-bind:vendor="value"></vendor>
+                            <product v-for="value in product" :key="value.id" v-bind:product="value"></product>
                     	    
                     	</div>
                 	</div>

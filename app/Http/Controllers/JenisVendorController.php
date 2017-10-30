@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JenisVendor;
 use Illuminate\Http\Request;
-use App\Models\Kategori;
 
-class KategoriController extends Controller
+class JenisVendorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,19 +15,16 @@ class KategoriController extends Controller
     public function index()
     {
         if(request()->wantsJson()){
-            $kategori = Kategori::select('ktgr_id', 'ktgr_nama')->get();
             $data = [];
-            foreach ($kategori as $key => $value) {
+            foreach (JenisVendor::select('jenvend_id', 'jenvend_nama')->get() as $key => $value) {
                 $row = [];
-                $row['id'] = $value->ktgr_id;
-                $row['title'] = $value->ktgr_nama;
-                // $row['target'] = '.filter-'.str_slug($value->ktgr_nama, '-');
+                $row['id'] = $value->jenvend_id;
+                $row['nama'] = $value->jenvend_nama;
                 $data[] = $row;
             }
+
             return response()->json($data, 200);
         }
-        // return Kategori::all();
-        return 'Kategori';
     }
 
     /**

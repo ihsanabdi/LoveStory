@@ -108,10 +108,10 @@
                                         <option value='{"sortBy":"popularity", "sortAscending":"false"}'>By Popularity (High to Low) &darr;</option>
                                     </select>
                                 </div>
-                                <div class="view-switch">
+                                {{-- <div class="view-switch">
                                     <a href="#" class="btn btn-primary"><i class="icon-th"></i></a>
                                     <a href="#" class="btn"><i class="icon-list"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div> <!-- /title -->

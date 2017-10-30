@@ -26,7 +26,9 @@ Route::get('kontak', function(){
 
 Route::get('vendor', 'VendorController@index')->name('vendor');
 
-Route::get('vendor/{id}/{params}', 'VendorController@show')->name('detail-vendor');
+Route::get('vendor/{id}/{params}', 'VendorController@show')->name('vendor.show');
+Route::get('detail-vendor/{id}', 'DetailVendorController@index')->name('detail-vendor');
+Route::get('jenis-vendor', 'JenisVendorController@index')->name('jenis-vendor');
 
 
 

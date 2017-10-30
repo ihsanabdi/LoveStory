@@ -3,22 +3,22 @@ require('./../bootstrap');
 window.Vue = require('vue');
 
 // Vue.component('sidebar', require('./components/sidebar'));
-Vue.component('vendor', require('./components/vendor'))
-
+Vue.component('product', require('./components/product'))
 
 const app = new Vue({
-    el: '#list-vendor',
-    data(){
-    	return {
-    		vendor: [],
+	el: '#list-detail-vendor',
+	data(){
+		return {
+			product: [],
             input: {
                 start: 0,
                 length: 9,
                 columns: [
-                    { data: 'nama', name: 'nama', searchable: true, orderable: false, search: {value:'', regex: false}},
                     { data: 'id', name: 'id', searchable: false, orderable: false, search: {value:'', regex: false}},
-                    { data: 'kategori', name: 'kategori', searchable: false, orderable: false, search: {value:'', regex: false}},
-                    { data: 'foto', name: 'foto', searchable: false, orderable: false, search: {value:'', regex: false}},
+                    { data: 'jenis', name: 'jenis', searchable: false, orderable: false, search: {value:'', regex: false}},
+                    { data: 'deskripsi', name: 'deskripsi', searchable: false, orderable: false, search: {value:'', regex: false}},
+                    { data: 'gambar', name: 'gambar', searchable: false, orderable: false, search: {value:'', regex: false}},
+                    { data: 'harga', name: 'harga', searchable: true, orderable: false, search: {value:'', regex: false}},
                 ],
                 search:{
                     value: '',
@@ -30,24 +30,31 @@ const app = new Vue({
                 value: ''
             },
             recordsTotal: '',
-            categories: [],
-            categori: [],
-            min_max_harga: [],
-            harga_max: 0,
-    	}
-    },
-    methods:{
-    	getData(){
-    		var vm = this
-    		axios.get(this.buildUrl(), {params: {categori: this.categori}})
-    			.then(res => {
-                    Vue.set(vm.$data, 'vendor', res.data.data)
-    				Vue.set(vm.$data, 'recordsTotal', res.data.recordsTotal)
-    			})
-    			.catch(e => {
-    				console.log(e.response)
-    			})
-    	},
+            jenis: [],
+            data_jenis: [],
+		}
+	},
+	methods:{
+		getData(){
+			var that = this
+			axios.get(that.buildUrl(), {params: {jenis:this.jenis}})
+				.then(res => {
+					Vue.set(that.$data, 'product', res.data.data)
+				})
+				.catch(e => {
+					console.log(e)
+				})
+		},
+		getJenis(){
+			var that = this
+			axios.get('/jenis-vendor')
+				.then(res => {
+					Vue.set(that.$data, 'data_jenis', res.data)
+				})
+				.catch(e => {
+					console.log(e.response)
+				})
+		},
         buildUrl(){
             var _columns = this.input.columns;
             var url_column ='';
@@ -69,7 +76,10 @@ const app = new Vue({
                 url_search += `&search[${key}]=${(!_search[key])?'':_search[key]}`;
             })
 
-            return `vendor?start=${this.input.start}&length=${this.input.length}${url_column}${url_search}${this.params.value}`;
+			var url = window.location.pathname;
+			var id = url.split('/');//id[2]
+
+            return `/detail-vendor/${id[2]}?start=${this.input.start}&length=${this.input.length}${url_column}${url_search}${this.params.value}`;
         },
         prev(){
             if(parseInt(this.input.start) > 0){
@@ -82,34 +92,14 @@ const app = new Vue({
                 this.getData();
             }
         },
-        getKategori(){
-            var vm = this
-            axios.get('kategori')
-                .then(res => {
-                    Vue.set(vm.$data, 'categories', res.data)
-                })
-                .catch(e => {
-                    console.log(e.response)
-                })
-        },
-        getHarga(){
-            var that = this
-            axios.get('max-min-harga').then(res => {
-                Vue.set(that.$data, 'min_max_harga', res.data)
-                // console.log(that.min_max_harga)
-            }).catch(e => {
-                console.log(e)
-            })
-        }
-    },
-    beforeMount(){
-        this.getData()
-    	this.getKategori()
-        this.getHarga();
-    },
-    watch:{
-        categori(){
-            this.getData();
-        }
-    },
-});
+	},
+	beforeMount(){
+		this.getData()
+		this.getJenis()
+	},
+	watch:{
+		jenis(){
+			this.getData()
+		}
+	}
+})
