@@ -115,6 +115,116 @@
                       </ul>
                     </div><!-- /.nav-collapse -->
                 </div>
+                <!--  ==========  -->
+            <!--  = Cart =  -->
+            <!--  ==========  -->
+            <div class="span3">
+                <div class="cart-container" id="cartContainer">
+                    <div class="cart">
+                        <p class="items">CART <span class="dark-clr">(5)</span></p>
+                        <p class="dark-clr hidden-tablet">Rp. 27.500.000</p>
+                        <a href="{{ url('checkout-step-1') }}" class="btn btn-warning">
+                            <!-- <span class="icon icons-cart"></span> -->
+                            <i class="icon-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="open-panel">
+                                                <div class="item-in-cart clearfix">
+                            <div class="image">
+                                <img src="images/galeri-7.jpg" width="124" height="124" alt="cart item" />
+                            </div>
+                            <div class="desc">
+                                <strong><a href="product.html">Dolor Ac Est Amet</a></strong>
+                                <span class="light-clr qty">
+                                    Qty: 2
+                                    &nbsp;
+                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <strong>Rp. 1.000.000</strong>
+                            </div>
+                        </div>
+                                                <div class="item-in-cart clearfix">
+                            <div class="image">
+                                <img src="images/galeri-8.jpg" width="124" height="124" alt="cart item" />
+                            </div>
+                            <div class="desc">
+                                <strong><a href="product.html">Amet Ac Vulputate Dapibus Sit</a></strong>
+                                <span class="light-clr qty">
+                                    Qty: 3
+                                    &nbsp;
+                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <strong>Rp. 10.000.000</strong>
+                            </div>
+                        </div>
+                                                <div class="item-in-cart clearfix">
+                            <div class="image">
+                                <img src="images/fairy4.jpg" width="124" height="124" alt="cart item" />
+                            </div>
+                            <div class="desc">
+                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
+                                <span class="light-clr qty">
+                                    Qty: 2
+                                    &nbsp;
+                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <strong>Rp. 5.000.000</strong>
+                            </div>
+                        </div>
+                                                <div class="item-in-cart clearfix">
+                            <div class="image">
+                                <img src="images/gold.jpg" width="124" height="124" alt="cart item" />
+                            </div>
+                            <div class="desc">
+                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
+                                <span class="light-clr qty">
+                                    Qty: 1
+                                    &nbsp;
+                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <strong>Rp. 1.500.000</strong>
+                            </div>
+                        </div>
+                                                <div class="item-in-cart clearfix">
+                            <div class="image">
+                                <img src="images/bronze.jpg" width="124" height="124" alt="cart item" />
+                            </div>
+                            <div class="desc">
+                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
+                                <span class="light-clr qty">
+                                    Qty: 4
+                                    &nbsp;
+                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <strong>Rp. 10.000.000</strong>
+                            </div>
+                        </div>
+                                                <div class="summary">
+                         
+                            <div class="line">
+                                <div class="row-fluid">
+                                    <div class="span6">Subtotal:</div>
+                                    <div class="span6 align-right size-16">Rp. 27.500.000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proceed">
+                            <a href="{{ url('checkout-step-1') }}" class="btn btn-warning pull-right bold higher">CHECKOUT <i class="icon-shopping-cart"></i></a>
+                            <small>Shipping costs are calculated based on location. <a href="#">More information</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /cart -->
               </div>
             </div>
           </div>
@@ -144,6 +254,109 @@
                 </div>
             </div> <!-- /bottom footer -->
         </footer> <!-- /footer -->
+
+        <!--  ==========  -->
+    <!--  = Modal Windows =  -->
+    <!--  ==========  -->
+
+    <!--  = Login =  -->
+    <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="loginModalLabel"><span class="light">Login</span> Love Story</h3>
+        </div>
+        <div class="modal-body">
+            <form method="post" action="#">
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputEmail">Username</label>
+                    <div class="controls">
+                        <input type="text" class="input-block-level" id="inputEmail" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputPassword">Password</label>
+                    <div class="controls">
+                        <input type="password" class="input-block-level" id="inputPassword" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                
+                <center><a href="{{route('home')}}" class="btn btn-warning higher bold">SIGN IN</a></center>
+            </form>
+            <p class="center-align push-down-0">
+                <a data-toggle="modal" role="button" href="#forgotPassModal" data-dismiss="modal">Forgot your password?</a>
+            </p>
+        </div>
+    </div>
+
+    <!--  = Register =  -->
+    <div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="registerModalLabel"><span class="light">Register</span> Love Story</h3>
+        </div>
+        <div class="modal-body">
+            <form method="post" action="#">
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputUsernameRegister">Username</label>
+                    <div class="controls">
+                        <input type="text" class="input-block-level" id="inputUsernameRegister" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputEmailRegister">Email</label>
+                    <div class="controls">
+                        <input type="email" class="input-block-level" id="inputEmailRegister" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputPasswordRegister">Password</label>
+                    <div class="controls">
+                        <input type="password" class="input-block-level" id="inputPasswordRegister" placeholder="Password" required>
+                    </div>
+                </div>
+                
+                <center><a href="{{route('home')}}" class="btn btn-warning higher bold">REGISTER</a></center>
+            </form>
+            <p class="center-align push-down-0">
+                <a data-toggle="modal" role="button" href="#loginModal" data-dismiss="modal">Already Registered?</a>
+            </p>
+
+        </div>
+    </div>
+
+    <!--  = Forgot your password =  -->
+    <div id="forgotPassModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="forgotPassModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="forgotPassModalLabel"><span class="light">Forgot</span> your password?</h3>
+        </div>
+        <div class="modal-body">
+            <form method="post" action="#">
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputUsernameRegister">Username</label>
+                    <div class="controls">
+                        <input type="text" class="input-block-level" id="inputUsernameRegister" placeholder="Username">
+                    </div>
+                </div>
+                <p class="center-align">OR</p>
+                <div class="control-group">
+                    <label class="control-label hidden shown-ie8" for="inputEmailRegister">Email</label>
+                    <div class="controls">
+                        <input type="email" class="input-block-level" id="inputEmailRegister" placeholder="Email">
+                    </div>
+                </div>
+                <center><a href="{{route('home')}}" class="btn btn-warning higher bold">SEND ME A NEW PASSWORD</a>
+            </form>
+        </div>
+    </div>
 
     </div> <!-- end of master-wrapper -->
 

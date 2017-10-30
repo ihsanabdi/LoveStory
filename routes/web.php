@@ -39,5 +39,21 @@ Route::get('gallery', function(){
 })->name('gallery');
 
 
+Route::get('checkout-step-1', function(){
+	return view('content.checkout-step-1');
+});
+
+Route::get('checkout-step-2', function(){
+	return view('content.checkout-step-2');
+});
+
+Route::get('checkout-step-3', function(){
+	return view('content.checkout-step-3');
+});
+
+Route::get('checkout-step-4', function(){
+	return view('content.checkout-step-4');
+});
+
 Route::get('kategori', 'KategoriController@index');
 
