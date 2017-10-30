@@ -30,7 +30,7 @@ body.pattern-12 { background: url('../images/backgrounds/pattern-12.gif?13903849
 
 hr { border-top-color: #e0e0e0; }
 
-a { color: #00becc; -webkit-transition: color 0.2s ease; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; transition: color 0.2s ease; }
+a { color: #D29F0C; -webkit-transition: color 0.2s ease; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; transition: color 0.2s ease; }
 a:hover { color: #008e99; }
 
 .clickable { cursor: pointer; }
@@ -287,7 +287,7 @@ i.box { display: inline-block; vertical-align: middle; *vertical-align: auto; *z
 /* ========== */
 /* = Header and Navbar = */
 /* ========== */
-.darker-row { background-color: #f3f3f3; padding: 5px 0; border-bottom: 1px solid #e0e0e0; }
+.darker-row { background-color: #f7f7f7; padding: 5px 0; border-bottom: 1px solid #e0e0e0; }
 
 .higher-line { line-height: 27px; display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; }
 
@@ -352,7 +352,7 @@ header .icons a:hover { color: #555555; text-decoration: none; }
 .navbar .nav > li.dropdown > a .caret { border-top-color: #999999 !important; border-bottom-color: #999999 !important; }
 .navbar .nav > li.dropdown > a:hover .caret { border-top-color: #333333 !important; border-bottom-color: #333333 !important; }
 .navbar .nav-stacked > li { float: none; width: 100%; }
-.navbar #magic-line { position: absolute; z-index: 10; top: -1px; left: 0; width: 0; height: 3px; background: #00becc; }
+.navbar #magic-line { position: absolute; z-index: 10; top: -1px; left: 0; width: 0; height: 3px; background: #D29F0C; }
 .navbar .navbar-form { margin-right: -7px; }
 .navbar .navbar-form button[type="submit"] { top: 15px; right: 0; }
 .navbar .navbar-form input[type="text"] { padding: 7px; padding-right: 25px; -webkit-transition: width 0.2s ease-in-out; -moz-transition: width 0.2s ease-in-out; -o-transition: width 0.2s ease-in-out; transition: width 0.2s ease-in-out; margin-top: 12px; }
@@ -708,7 +708,7 @@ header .icons a:hover { color: #555555; text-decoration: none; }
 
 .boxed .push-up { margin-top: 0; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
 
-.blocks-spacer { /*margin-bottom: 30px;*/ }
+.blocks-spacer { margin-bottom: 30px; }
 
 .blocks-spacer-last { margin-bottom: 50px; }
 
@@ -721,14 +721,14 @@ header .icons a:hover { color: #555555; text-decoration: none; }
 .featured-items .product .main-titles { padding-bottom: 0; }
 .featured-items .product p { color: #aaa; }
 
-.boxed-area { background: url('../images/box-bg.jpg?1390312582') repeat; background: url('../images/jagged-border-top.png?1390384914') repeat-x top, url('../images/jagged-border-bot.png?1390384914') repeat-x bottom, url('../images/box-bg.jpg?1390312582') repeat; padding: 40px 0 10px; }
+.boxed-area { background: url('../images/jagged-border-top.png?1390384914') repeat-x top, url('../images/jagged-border-bot.png?1390384914') repeat-x bottom, url('../images/box-bg.jpg?1390312582') repeat; padding: 40px 0 10px;  }
 .boxed-area.no-bottom { background: url('../images/jagged-border-top.png?1390384914') repeat-x top, url('../images/box-bg.jpg?1390312582') repeat; }
 .boxed-area .main-titles.lined:after, .boxed-area .main-titles .arrows:after { background-color: #c3c2c4; }
 .boxed-area .blocks-spacer { margin-bottom: 20px; }
 .boxed-area .blocks-spacer-last { margin-bottom: 40px; }
 .boxed-area .picture img { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 
-.popup-products { margin-top: 50px; }
+.popup-products { margin-top: 10px; }
 .popup-products .product, .popup-products .product-inner { -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
 .popup-products .product { -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; position: relative; margin-bottom: 20px; }
 .popup-products .product .stars, .popup-products .product .hidden-line { opacity: 0; filter: alpha(opacity=0); -webkit-transition: opacity 0.2s ease; -moz-transition: opacity 0.2s ease; -o-transition: opacity 0.2s ease; transition: opacity 0.2s ease; margin: 0; color: #b9b8ba; }
@@ -750,7 +750,7 @@ header .icons a:hover { color: #555555; text-decoration: none; }
 
 .darker-stripe.with-shadows:before, .darker-stripe.with-shadows:after { content: ""; position: absolute; left: 50%; margin-left: -600px; height: 6px; width: 1200px; }
 
-.darker-stripe { background: #7e9399; background: -moz-radial-gradient(40% 30%, circle farthest-side, #9aabb0, #7e9399), #7e9399; background: -webkit-radial-gradient(40% 30%, circle farthest-side, #9aabb0, #7e9399), #7e9399; background: radial-gradient(40% 30%, circle farthest-side, #9aabb0, #7e9399), #7e9399; padding: 8px 0; overflow: hidden; min-height: 60px; }
+.darker-stripe { background: #D29F0C; background: -moz-radial-gradient(40% 30%, circle farthest-side, #D29F0C, #D29F0C), #7e9399; background: -webkit-radial-gradient(40% 30%, circle farthest-side, #D29F0C, #D29F0C), #7e9399; background: radial-gradient(40% 30%, circle farthest-side, #9aabb0, #7e9399), #7e9399; padding: 8px 0; overflow: hidden; min-height: 60px; }
 .darker-stripe.more-space { padding: 30px 0 40px; }
 .darker-stripe.with-shadows { position: relative; }
 .darker-stripe.with-shadows:before { top: 0; background: -moz-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0)); background: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0)); background: radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0)); }
@@ -899,13 +899,13 @@ pre { border-radius: 0; background-color: #f3f3f3; }
 .checkout-steps .step:before { content: ""; position: absolute; top: 10px; left: 0; right: 0; height: 2px; background: #e6e6e6; z-index: 0; }
 .checkout-steps .step:first-of-type:before { left: 50%; }
 .checkout-steps .step:last-of-type:before { right: 50%; }
-.checkout-steps .step.active:last-of-type:before, .checkout-steps .step.done:last-of-type:before { background: #00becc; }
-.checkout-steps .step.active .step-badge, .checkout-steps .step.done .step-badge { background-color: #00becc; color: #fff; }
+.checkout-steps .step.active:last-of-type:before, .checkout-steps .step.done:last-of-type:before { background: #D29F0C; }
+.checkout-steps .step.active .step-badge, .checkout-steps .step.done .step-badge { background-color: #D29F0C; color: #fff; }
 .checkout-steps .step.active { color: #34353e; }
-.checkout-steps .step.active:before { background: -moz-linear-gradient(left, #00becc 0%, #00becc 50%, #e6e6e6 50%, #e6e6e6 100%); background: -webkit-linear-gradient(left, #00becc 0%, #00becc 50%, #e6e6e6 50%, #e6e6e6 100%); background: linear-gradient(to right, #00becc 0%, #00becc 50%, #e6e6e6 50%, #e6e6e6 100%); }
+.checkout-steps .step.active:before { background: -moz-linear-gradient(left, #00becc 0%, #D29F0C 50%, #D29F0C 50%, #D29F0C 100%); background: -webkit-linear-gradient(left, #D29F0C 0%, #D29F0C 50%, #D29F0C 50%, #D29F0C 100%); background: linear-gradient(to right, #D29F0C 0%, #D29F0C 50%, #D29F0C 50%, #D29F0C 100%); }
 .checkout-steps .step.active:first-of-type:before { background: #e6e6e6; }
-.checkout-steps .step.done:before { background: #00becc; }
-.checkout-steps .step.done:first-of-type:before { background: #00becc; }
+.checkout-steps .step.done:before { background: #D29F0C; }
+.checkout-steps .step.done:first-of-type:before { background: #D29F0C; }
 .checkout-steps .step-badge { margin: 0 auto; -webkit-border-radius: 99px; -moz-border-radius: 99px; border-radius: 99px; width: 22px; height: 22px; background-color: #e6e6e6; position: relative; z-index: 1; line-height: 22px; margin-bottom: 5px; }
 
 .shifted-left-45 { margin-left: 45px; padding-top: 3px; }
@@ -1528,8 +1528,8 @@ label { font-weight: bold; color: #333333; }
 /* ========== */
 /* = Footer = */
 /* ========== */
-.foot-last { background-color: #222222; padding: 12px 0; position: relative; }
-.foot-last #toTheTop { position: absolute; top: -23px; left: 50%; height: 23px; width: 60px; margin-left: -30px; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; background: #222222; text-align: center; color: #555555; line-height: 23px; }
+.foot-last { background-color: #D29F0C; padding: 12px 0; position: relative; }
+.foot-last #toTheTop { position: absolute; top: -23px; left: 50%; height: 23px; width: 60px; margin-left: -30px; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; background: #D29F0C; text-align: center; color: #555555; line-height: 23px; }
 .foot-last #toTheTop:hover { text-decoration: none; }
 .foot-last a { font-weight: bold; color: white; }
 
@@ -1634,14 +1634,12 @@ label { font-weight: bold; color: #333333; }
 .lt-ie9 .featured.product-img { background-image: url('../images/shelf-ie8.png?1390384914'); }
 
 
-
 /* 
 =============================================== 
 2. Wedding About Intro
 =============================================== 
 */
 #wedding-intro {
-  background: #EAF8FF;
   text-align: center;
   /*padding-top: 100px; */}
   #wedding-intro .wedding-about-intro {
@@ -1728,7 +1726,7 @@ label { font-weight: bold; color: #333333; }
           padding: 25px;
           text-align: center; } }
   #wedding-intro .couple-info-wrapper {
-    margin: 60px 0;
+    margin: 0px 0;
     position: relative; }
     #wedding-intro .couple-info-wrapper .couple-container {
       width: 400px;
@@ -1742,12 +1740,12 @@ label { font-weight: bold; color: #333333; }
           width: 100%;
           margin: 0px 0px; } }
       #wedding-intro .couple-info-wrapper .couple-container .couple-photo {
-        width: 350px;
-        height: 350px;
+        width: 200px;
+        height: 200px;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        border: 10px solid #FF9999;
+        border: 10px solid #D29F0C;
         overflow: hidden;
         margin: 0 auto; }
         @media (max-width: 767px) {
@@ -1795,7 +1793,7 @@ label { font-weight: bold; color: #333333; }
     #wedding-intro .couple-info-wrapper .couple-photo-divider {
       height: 250px;
       position: absolute;
-      top: 40px;
+      top: -40px;
       left: 0;
       right: 0;
       background: url("../images/flower-3.png") center no-repeat; }
