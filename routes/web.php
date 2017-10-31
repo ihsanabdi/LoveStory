@@ -32,9 +32,7 @@ Route::get('jenis-vendor', 'JenisVendorController@index')->name('jenis-vendor');
 
 
 
-Route::get('paket', function(){
-	return view('content.paket');
-});
+Route::get('paket/{params}', ['as'=>'paket.show', 'uses'=>'PaketController@show']);
 
 Route::get('gallery', function(){
 	return view('content.gallery');
@@ -48,6 +46,8 @@ Route::get('max-min-harga', function(){
 	$data['min'] = App\Models\DetailVendor::min('dave_harga');
 	return response()->json($data);
 });
+
+Route::get('budget-helper', ['as'=>'budget-helper', 'uses'=>'PaketController@budget']);
 
 
 Route::group(['prefix' => 'cart'], function(){

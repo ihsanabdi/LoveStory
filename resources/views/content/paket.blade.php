@@ -2,9 +2,7 @@
 
 @section('title', 'Home')
 
-@section('content')
-
-    
+@section('breadcrumbs')
     <!--  ==========  -->
     <!--  = Breadcrumbs =  -->
     <!--  ==========  -->
@@ -14,25 +12,20 @@
                 <div class="span12">
                     <ul class="breadcrumb">
                         <li>
-                            <a href="#">Webmarket</a>
+                            <a href="{{ route('home') }}">Love Story</a>
                         </li>
                         <li><span class="icon-chevron-right"></span></li>
                         <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
-                        <li><span class="icon-chevron-right"></span></li>
-                        <li>
-                            <a href="#">Horsefeathers</a>
-                        </li>
-                        <li><span class="icon-chevron-right"></span></li>
-                        <li>
-                            <a href="product.html">Horsefeathers Shot Surfers T-shirt</a>
+                            <a href="{{ route('paket.show', ['params'=>$paket->pkt_nama]) }}">{{ $paket->pkt_nama }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+
+@section('content')
 
     <!--  ==========  -->
     <!--  = Main container =  -->
@@ -51,23 +44,23 @@
                 <div class="span5">
                     <div class="product-preview">
                         <div class="picture">
-                            <img src="images/dummy/products/shirt-1.jpg" alt="" width="940" height="940" id="mainPreviewImg" />
+                            <img src="{{ url('images/dummy/products/shirt-1.jpg')}}" alt="" width="940" height="940" id="mainPreviewImg" />
                         </div>
                         <div class="thumbs clearfix">
                             <div class="thumb active">
-                                <a href="#mainPreviewImg"><img src="images/dummy/products/shirt-1.jpg" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/dummy/products/shirt-1.jpg')}}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="images/dummy/products/shirt-2.jpg" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/dummy/products/shirt-2.jpg')}}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="images/dummy/products/shirt-3.jpg" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/dummy/products/shirt-3.jpg')}}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="images/dummy/products/shirt-3.jpg" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/dummy/products/shirt-3.jpg')}}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="images/dummy/products/shirt-3.jpg" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/dummy/products/shirt-3.jpg')}}" alt="" width="940" height="940" /></a>
                             </div>
                         </div>
                     </div>
@@ -78,10 +71,10 @@
                 <!--  ==========  -->
                 <div class="span7">
                     <div class="product-title">
-                        <h1 class="name"><span class="light">Jenis</span> Paket</h1>
+                        <h1 class="name">{{ $paket->pkt_nama }}</h1>
                     </div>
                     <div class="product-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor tellus, tempor ut ultrices ferme ntum, aliquam consequat metus. In vel turpis dolorin dapibus dui. Aenean at auctor neque. Lorem ipsum dolor sit , consectetur elit. Fusce dolor tellus, tempor ut ultrices fermentum, aliquam consequat metus. In vel turpis dolor, in dapibus dui. Aenean at auctor neque.</p>
+                        <p>{{$paket->pkt_deskripsi}}</p>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -107,7 +100,7 @@
                         <hr />
                         
                         <a href="#" class="btn btn-block btn-success">Pilih</a>
-                        <a href="#" class="btn btn-block btn-warning">Budget Helper</a>
+                        <a href="{{route('budget-helper')}}" class="btn btn-block btn-warning">Budget Helper</a>
                     </div>
                 </div>
             </div>

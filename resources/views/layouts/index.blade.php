@@ -338,8 +338,8 @@
     <script src="{{url('js/prettyphoto/js/jquery.prettyPhoto.js')}}" type="text/javascript"></script>
 
     <!--  = Google Maps API =  -->
-    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="{{url('js/goMap/js/jquery.gomap-1.3.2.min.js')}}"></script>
+    {{-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{url('js/goMap/js/jquery.gomap-1.3.2.min.js')}}"></script> --}}
     
     {{-- SlimScroll --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
