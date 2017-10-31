@@ -73,7 +73,7 @@ class VendorController extends Controller
     public function show($id, $params)
     {
         $vendor = Vendor::find($id);
-        return view('content.list-detail-vendor');
+        return view('content.list-detail-vendor', compact('vendor'));
     }
 
     /**

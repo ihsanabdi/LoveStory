@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-// use App\Models\DetailVendor;
-// use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Models\DetailVendor;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -15,9 +15,12 @@ class CartController extends Controller
      */
     public function index()
     {
+        $cart = Cart::content();
         if(request()->wantsJson()){
 
         }
+
+        return view('content.checkout-step-1', compact('cart'));
     }
 
     /**
@@ -38,20 +41,23 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        return 'data';
         // $this->validate($request, [
         //     'id' => 'require'
         // ]);
-        // if(request()->wantsJson()){
-        //     // $data =  DetailVendor::find($request->id);
-        //     // $data = Cart::add([
-        //     //     'id' => $request->id,
-        //     //     'name' => $request->nama,
-        //     //     'qty' => 1,
-        //     //     'price' => $request->price,
-        //     // ]);
-        //     return response()->json('Hello', 201);
-        // }
+        $id = $request->id;
+
+        $detail =  DetailVendor::findOrFail($id);
+        $data = Cart::add([
+            'id' => $detail->dave_id,
+            'name' => "Nama",
+            'qty' => 1,
+            'price' => $detail->dave_harga,
+        ]);
+
+        return response()
+            ->json([
+                'message'=> "Cart Berhasil Ditambahkan"
+            ], 201);
     }
 
     /**
@@ -96,7 +102,9 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+        
+        return redirect()->back();
     }
 
     public function clear()

@@ -107,121 +107,61 @@
                         <li class="active"><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ url('tentang-kami') }}">About</a></li>
                         <li><a href="{{ route('vendor') }}">Vendor</a></li>
-                        <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
                         <li><a href="{{ url('kontak') }}">Contact</a></li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                 </div>
                 <!--  ==========  -->
-            <!--  = Cart =  -->
-            <!--  ==========  -->
-            <div class="span3">
-                <div class="cart-container" id="cartContainer">
-                    <div class="cart">
-                        <p class="items">CART <span class="dark-clr">(5)</span></p>
-                        <p class="dark-clr hidden-tablet">Rp. 27.500.000</p>
-                        <a href="{{ url('checkout-step-1') }}" class="btn btn-warning">
-                            <!-- <span class="icon icons-cart"></span> -->
-                            <i class="icon-shopping-cart"></i>
-                        </a>
-                    </div>
-                    <div class="open-panel">
-                                                <div class="item-in-cart clearfix">
-                            <div class="image">
-                                <img src="images/galeri-7.jpg" width="124" height="124" alt="cart item" />
-                            </div>
-                            <div class="desc">
-                                <strong><a href="product.html">Dolor Ac Est Amet</a></strong>
-                                <span class="light-clr qty">
-                                    Qty: 2
-                                    &nbsp;
-                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
-                                </span>
-                            </div>
-                            <div class="price">
-                                <strong>Rp. 1.000.000</strong>
-                            </div>
+                <!--  = Cart =  -->
+                <!--  ==========  -->
+                <div class="span3">
+                    <div class="cart-container" id="cartContainer">
+                        <div class="cart">
+                            <p class="items">CART <span class="dark-clr">({{Cart::count()}})</span></p>
+                            <p class="dark-clr hidden-tablet">Rp.{{Cart::subtotal(2, ',', '.')}}</p>
+                            <a href="{{ route('cart.index') }}" class="btn btn-warning">
+                                <!-- <span class="icon icons-cart"></span> -->
+                                <i class="icon-shopping-cart"></i>
+                            </a>
                         </div>
-                                                <div class="item-in-cart clearfix">
-                            <div class="image">
-                                <img src="images/galeri-8.jpg" width="124" height="124" alt="cart item" />
+                        <div class="open-panel">
+                            @php($keranjang = Cart::content())
+
+                            @foreach($keranjang as $k)
+                            <div class="item-in-cart clearfix">
+                                <div class="image">
+                                    <img src="{{ url('images/galeri-7.jpg') }}" width="124" height="124" alt="cart item" />
+                                </div>
+                                <div class="desc">
+                                    <strong><a href="#">{{ $k->name }}</a></strong>
+                                    <span class="light-clr qty">
+                                        Qty: {{ $k->qty }}
+                                        &nbsp;
+                                        <a title="Remove Item" class="icon-remove-sign" href="{{route('cart.destroy', ['id'=>$k->rowId ])}}" onclick="event.preventDefault();
+                                                 document.getElementById('remove-cart-{{$k->id}}').submit();"></a>
+                                        <form id="remove-cart-{{$k->id}}" action="{{route('cart.destroy', ['id'=>$k->rowId ])}}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </span>
+                                </div>
+                                <div class="price">
+                                    <strong>Rp.{{number_format($k->price, 2, ',', '.')}}</strong>
+                                </div>
                             </div>
-                            <div class="desc">
-                                <strong><a href="product.html">Amet Ac Vulputate Dapibus Sit</a></strong>
-                                <span class="light-clr qty">
-                                    Qty: 3
-                                    &nbsp;
-                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
-                                </span>
-                            </div>
-                            <div class="price">
-                                <strong>Rp. 10.000.000</strong>
-                            </div>
-                        </div>
-                                                <div class="item-in-cart clearfix">
-                            <div class="image">
-                                <img src="images/fairy4.jpg" width="124" height="124" alt="cart item" />
-                            </div>
-                            <div class="desc">
-                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
-                                <span class="light-clr qty">
-                                    Qty: 2
-                                    &nbsp;
-                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
-                                </span>
-                            </div>
-                            <div class="price">
-                                <strong>Rp. 5.000.000</strong>
-                            </div>
-                        </div>
-                                                <div class="item-in-cart clearfix">
-                            <div class="image">
-                                <img src="images/gold.jpg" width="124" height="124" alt="cart item" />
-                            </div>
-                            <div class="desc">
-                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
-                                <span class="light-clr qty">
-                                    Qty: 1
-                                    &nbsp;
-                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
-                                </span>
-                            </div>
-                            <div class="price">
-                                <strong>Rp. 1.500.000</strong>
-                            </div>
-                        </div>
-                                                <div class="item-in-cart clearfix">
-                            <div class="image">
-                                <img src="images/bronze.jpg" width="124" height="124" alt="cart item" />
-                            </div>
-                            <div class="desc">
-                                <strong><a href="product.html">Lorem Amet Adipiscing Metus</a></strong>
-                                <span class="light-clr qty">
-                                    Qty: 4
-                                    &nbsp;
-                                    <a href="#" class="icon-remove-sign" title="Remove Item"></a>
-                                </span>
-                            </div>
-                            <div class="price">
-                                <strong>Rp. 10.000.000</strong>
-                            </div>
-                        </div>
-                                                <div class="summary">
-                         
-                            <div class="line">
-                                <div class="row-fluid">
-                                    <div class="span6">Subtotal:</div>
-                                    <div class="span6 align-right size-16">Rp. 27.500.000</div>
+                            @endforeach
+
+                            <div class="summary">
+                                <div class="line">
+                                    <div class="row-fluid">
+                                        <div class="span4">Subtotal:</div>
+                                        <div class="span6 align-right size-16">Rp.{{Cart::subtotal(2, ',', '.')}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="proceed">
-                            <a href="{{ url('checkout-step-1') }}" class="btn btn-warning pull-right bold higher">CHECKOUT <i class="icon-shopping-cart"></i></a>
-                            <small>Shipping costs are calculated based on location. <a href="#">More information</a></small>
-                        </div>
                     </div>
-                </div>
-            </div> <!-- /cart -->
+                </div> <!-- /cart -->
               </div>
             </div>
           </div>
@@ -398,8 +338,8 @@
     <script src="{{url('js/prettyphoto/js/jquery.prettyPhoto.js')}}" type="text/javascript"></script>
 
     <!--  = Google Maps API =  -->
-    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="{{url('js/goMap/js/jquery.gomap-1.3.2.min.js')}}"></script>
+    {{-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{url('js/goMap/js/jquery.gomap-1.3.2.min.js')}}"></script> --}}
     
     {{-- SlimScroll --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>

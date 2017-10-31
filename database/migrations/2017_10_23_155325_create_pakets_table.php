@@ -16,7 +16,7 @@ class CreatePaketsTable extends Migration
         Schema::create('paket', function (Blueprint $table) {
             $table->increments('pkt_id');
             $table->string('pkt_nama', 150);
-            $table->text('pkt_deksripsi');
+            $table->text('pkt_deskripsi');
             $table->string('pkt_foto');
             $table->string('pkt_create_by', 150);
             $table->string('pkt_change_by', 150);

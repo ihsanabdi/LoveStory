@@ -32,9 +32,7 @@ Route::get('jenis-vendor', 'JenisVendorController@index')->name('jenis-vendor');
 
 
 
-Route::get('paket', function(){
-	return view('content.paket');
-});
+Route::get('paket/{params}', ['as'=>'paket.show', 'uses'=>'PaketController@show']);
 
 Route::get('paket-eksekutif', function(){
 	return view('content.paket-eksekutif');
@@ -57,22 +55,6 @@ Route::get('gallery', function(){
 })->name('gallery');
 
 
-Route::get('checkout-step-1', function(){
-	return view('content.checkout-step-1');
-});
-
-Route::get('checkout-step-2', function(){
-	return view('content.checkout-step-2');
-});
-
-Route::get('checkout-step-3', function(){
-	return view('content.checkout-step-3');
-});
-
-Route::get('checkout-step-4', function(){
-	return view('content.checkout-step-4');
-});
-
 Route::get('kategori', 'KategoriController@index');
 
 Route::get('max-min-harga', function(){
@@ -81,14 +63,17 @@ Route::get('max-min-harga', function(){
 	return response()->json($data);
 });
 
+Route::get('budget-helper', ['as'=>'budget-helper', 'uses'=>'PaketController@budget']);
+
 
 Route::group(['prefix' => 'cart'], function(){
-	// Route::get('index', ['as'=>'cart.index', 'uses'=>'CartController@index']);
-	
-	// Route::post('destroy', ['as'=>'cart.destroy', 'uses'=>'CartController@destroy']);
-	// Route::post('clear', ['as'=>'cart.clear', 'uses'=>'CartController@clear']);
-	// Route::post('total', ['as'=>'cart.total', 'uses'=>'CartController@total']);
+	Route::get('checkout', ['as'=>'cart.index', 'uses'=>'CartController@index']);
+	Route::post('store',['as'=>'cart.store', 'uses'=>'CartController@store']);
+	Route::post('destroy/{id}', ['as'=>'cart.destroy', 'uses'=>'CartController@destroy']);
+	Route::post('clear', ['as'=>'cart.clear', 'uses'=>'CartController@clear']);
+	Route::post('total', ['as'=>'cart.total', 'uses'=>'CartController@total']);
 });
+<<<<<<< HEAD
 Route::post('cart/store', function(){
 	return response()->json(['Hello'], 200);
 });
@@ -96,3 +81,8 @@ Route::post('cart/store', function(){
 Route::get('budget', function(){
 	return view('content.budget');
 });
+=======
+
+
+
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @extends('layouts.index')
 
@@ -5,6 +6,12 @@
 
 @section('Breadcrumbs')
 
+=======
+@extends('layouts.index')
+@section('title', 'Budget Helper')
+
+@section('Breadcrumbs')
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
     <!--  ==========  -->
     <!--  = Breadcrumbs =  -->
     <!--  ==========  -->
@@ -18,7 +25,11 @@
                         </li>
                         <li><span class="icon-chevron-right"></span></li>
                         <li>
+<<<<<<< HEAD
                             <a href="#">Budget Helper</a>
+=======
+                            <a href="{{ route('budget-helper') }}">@yield('title')</a>
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
                         </li>
                     </ul>
                 </div>
@@ -28,7 +39,11 @@
 @endsection
 
 @section('content')
+<<<<<<< HEAD
     <div class="container">
+=======
+	<div class="container">
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
         <div class="push-up top-equal blocks-spacer">
             <div class="row">
 
@@ -45,7 +60,11 @@
                 <div class="span12">
                           
                                  <p class="push-down-25" align="justify">
+<<<<<<< HEAD
                                Budget Helper merupakan fitur Love Story yang akan memudahkan anda untuk mengatur pengeluaran budget secara sendiri. Tidak Hanya itu, anda juga dapat memilih vendor sesuai dengan yang anda inginkan. Adapun persyaratan fitur Budget Helper yaitu jumlah total tidak boleh kurang dari harga paket yang ditawarkan.
+=======
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue. Donec lobortis dui sagittis, ultrices nunc ornare, ultricies elit. Curabitur tristique felis pulvinar nibh porta, sit amet interdum ligula placerat. Maecenas auctor, sem nec eleifend blandit...
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
                             </p>
                 </div>
                 <!--  ==========  -->
@@ -60,6 +79,7 @@
                     		<section class="span2">
                                 <p><b>Gedung</b></p> 
                             </section> 
+<<<<<<< HEAD
                           	<section class="span3">
                                 <input disabled type="text" aria-required="true" tabindex="1" size="30" style="width: 100%" value="" id="author" name="author" placeholder="Rp." required>
                             </section>
@@ -138,6 +158,59 @@
                             <section class="span1">
                                 <button class="btn btn-warning" disabled style="margin-top: 4px;color: #fff">Vendor</button>
                             </section> 
+=======
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Konsumsi</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Make Up</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Dekorasi</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Dokumentasi</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Sewa Pakaian</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Souvenir</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>Organize Hari H</b></p> 
+                            </section> 
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <p><b>MC</b></p> 
+                            </section>  
+                          	<section class="span4">
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 80%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
                             <hr style="width: 100%">
                             <section class="span3">
                             &nbsp;
@@ -146,11 +219,18 @@
                                 <h3><b>Total</b></h3> 
                             </section>  
                           	<section class="span3">
+<<<<<<< HEAD
                                 <input disabled type="text" aria-required="true" tabindex="1" size="30" style="width: 100%" value="" id="author" name="author" placeholder="Rp." required>
                             </section>
                             <section class="span2">
 
                         <a href="{{ route('home') }}" class="btn btn-block btn-warning" style="margin-top: 3px;width: 70%">Save Budget</a>
+=======
+                                <input type="text" aria-required="true" tabindex="1" size="30" style="width: 100%" value="" id="author" name="author" placeholder="Rp." required>
+                            </section>
+                            <section class="span2">
+                                <butto style="margin-top: 4px;margin-left: 40px" class="btn btn-warning bold" type="submit" tabindex="5" id="submit">Save Budget</button>
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
                             </section>
 
                             <section class="span3">
@@ -166,6 +246,7 @@
             </div>
         </div>
     </div> <!-- /container -->
+<<<<<<< HEAD
 
      <!--  = Login =  -->
     <div id="vendor"  class="modalKu hide " tabindex="3" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" >
@@ -209,3 +290,6 @@
     </div>
     @endsection
     
+=======
+@endsection
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc

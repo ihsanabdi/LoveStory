@@ -1,6 +1,6 @@
 @extends('layouts.index')
 
-@section('title', 'Home')
+@section('title', $vendor->vend_nama)
 
 @section('Breadcrumbs')
     <!--  ==========  -->
@@ -17,6 +17,10 @@
                         <li><span class="icon-chevron-right"></span></li>
                         <li>
                             <a href="{{ route('vendor') }}">Vendor</a>
+                        </li>
+                        <li><span class="icon-chevron-right"></span></li>
+                        <li>
+                            <a href="{{ route('vendor.show', ['id'=> $vendor->vend_id, 'params'=>str_slug($vendor->vend_nama, '-')]) }}">{{ $vendor->vend_nama }}</a>
                         </li>
                     </ul>
                 </div>
