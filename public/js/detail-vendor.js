@@ -42790,10 +42790,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ['product'],
     methods: {
         addCart: function addCart() {
-            axios.post('/cart/store', { params: { id: this.product.id } }).then(function (res) {
+            axios.post('/cart/store', {
+                id: this.product.id
+            }).then(function (res) {
                 console.log(res);
             }).catch(function (e) {
-                console.log(e);
+                console.log(e.response);
             });
         }
     }
@@ -42825,15 +42827,6 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "img-overlay" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn more btn-primary",
-                    attrs: { href: "javascript::void(0)" }
-                  },
-                  [_vm._v("More")]
-                ),
-                _vm._v(" "),
                 _c(
                   "a",
                   {

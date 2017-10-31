@@ -42834,15 +42834,6 @@ var render = function() {
                   attrs: { href: _vm.vendor.url }
                 },
                 [_vm._v("More")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn buy btn-danger",
-                  attrs: { href: "javascript:void(0)" }
-                },
-                [_vm._v("Add to Cart")]
               )
             ])
           ])
@@ -42854,43 +42845,12 @@ var render = function() {
           _c("h5", { staticClass: "no-margin isotope--title" }, [
             _vm._v(_vm._s(_vm.vendor.kategori))
           ])
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
+        ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row-fluid hidden-line" }, [
-      _c("div", { staticClass: "span6" }, [
-        _c("a", { staticClass: "btn btn-small", attrs: { href: "#" } }, [
-          _c("i", { staticClass: "icon-heart" })
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "btn btn-small", attrs: { href: "#" } }, [
-          _c("i", { staticClass: "icon-exchange" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "span6 align-right" }, [
-        _c("span", { staticClass: "icon-star stars-clr" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "icon-star stars-clr" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "icon-star" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "icon-star" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "icon-star" })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
