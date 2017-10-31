@@ -65,7 +65,7 @@
                     </div>
                     <div class="span4">
                         <div class="higher-line">
-                            <h2 style="margin-top: 25px;color: #BABABA"><i>Your Best Companion</i></h2>
+                            <h2 style="margin-top: 25px;color: #BABABA"><i>A Great Family Starts Hear</i></h2>
                         </div>
                     </div>
                     <div class="span7">

@@ -34,12 +34,10 @@ div.transbox p {
         <div class="row">
             <div class="span12">
                 <div class="brands  carouFredSel" data-nav="brands" data-autoplay="true">
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_01.jpg" alt="" width="203" height="104" /></a>
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_02.jpg" alt="" width="203" height="104" /></a>
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_03.jpg" alt="" width="203" height="104" /></a>
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_04.jpg" alt="" width="203" height="104" /></a>
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_05.jpg" alt="" width="203" height="104" /></a>
-                    <a href="http://www.proteusthemes.com/"><img src="images/dummy/brands/brands_06.jpg" alt="" width="203" height="104" /></a>
+                    <img src="{{ url('images/psikolog.jpg') }}" alt="" width="203" height="104" />
+                    <img src="{{ url('images/qurrota.jpg') }}" alt="" width="203" height="104" />
+                    <img src="{{ url('images/globit.jpg') }}" alt="" width="203" height="104" />
+                    <img src="{{ url('images/sfitnes.jpg') }}" alt="" width="203" height="104" />
                 </div>
             </div>
         </div> <!-- /logos -->

@@ -18,7 +18,7 @@
                         </li>
                         <li><span class="icon-chevron-right"></span></li>
                         <li>
-                            <a href="">Paket Gold</a>
+                            <a href="">Paket Bronze</a>
                         </li>
                     </ul>
                 </div>
@@ -43,23 +43,23 @@
                 <div class="span5">
                     <div class="product-preview">
                         <div class="picture">
-                            <img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" id="mainPreviewImg" />
+                            <img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" id="mainPreviewImg" />
                         </div>
                         <div class="thumbs clearfix">
                             <div class="thumb active">
-                                <a href="#mainPreviewImg"><img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" /></a>
                             </div>
                             <div class="thumb">
-                                <a href="#mainPreviewImg"><img src="{{ url('images/gold.jpg') }}" alt="" width="940" height="940" /></a>
+                                <a href="#mainPreviewImg"><img src="{{ url('images/bronze.jpg') }}" alt="" width="940" height="940" /></a>
                             </div>
                         </div>
                     </div>
@@ -70,52 +70,40 @@
                 <!--  ==========  -->
                 <div class="span7">
                     <div class="product-title">
-                        <h1 class="name"><span class="light">Paket</span> Gold</h1>
+                        <h1 class="name"><span class="light">Paket</span> Bronze</h1>
                     </div>
                     <div class="product-description">
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
-                                    <td>Konsumsi (Makan Utama, Snack dan Stall Prasmanan) /600 pax</td>
-                                    <td>Rp.45.000.000,-</td>
+                                    <td>Konsumsi (Makan Utama, Snack dan Stall Prasmanan) /500 pax</td>
+                                    <td>Rp.21.875.000,-</td>
                                 </tr>
                                 <tr>
-                                    <td>Dekor Full (Indoor dan Outdoor)</td>
-                                    <td>Rp.43.750.000,-</td>
+                                    <td>Dekor plaminan dan altar</td>
+                                    <td>Rp.18.750.000,-</td>
                                 </tr>
                                 <tr>
-                                    <td>Gedung kapasitas 300 undangan</td>
-                                    <td>Rp.20.000.000,-</td>
-                                </tr>
-                                <tr>
-                                    <td>Dokumentasi (Foto 2+ Vidio 1)</td>
-                                    <td>Rp.18.125.000,-</td>
-                                </tr>
-                                <tr>
-                                    <td>Make Up (Pengantin Wanita+ 2ibu)</td>
-                                    <td>Rp.10.625.000,-</td>
-                                </tr>
-                                <tr>
-                                    <td>Sewa Pakaian (3-4 pakaian adat dan modern)</td>
-                                    <td>Rp.10.000.000,-</td>
-                                </tr>
-                                <tr>
-                                    <td>Souvenir + Undangan</td>
+                                    <td>Gedung kapasitas 50 undangan</td>
                                     <td>Rp.6.250.000,-</td>
                                 </tr>
                                 <tr>
-                                    <td>Organizer Hari H</td>
-                                    <td>Rp.8.500.000,-</td>
+                                    <td>Dokumentasi (Fotografer 1+ Vidiografer 1)</td>
+                                    <td>Rp.8.125.000,-</td>
                                 </tr>
                                 <tr>
-                                    <td>MC</td>
-                                    <td>Rp.2.500.000,-</td>
+                                    <td>Make Up (Pengantin Wanita)</td>
+                                    <td>Rp.3.125.000,-</td>
+                                </tr>
+                                <tr>
+                                    <td>Sewa Pakaian (2 pakaian adat atau modern)</td>
+                                    <td>Rp.5.000.000,-</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <th>Total</th>
-                                    <th>Rp.164.750.000,-</th>
+                                    <th>Rp.63.125.000,-</th>
                                 </tr>
                             </tfoot>
                         </table>
