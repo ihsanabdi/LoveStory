@@ -73,7 +73,7 @@ Route::group(['prefix' => 'cart'], function(){
 	Route::post('clear', ['as'=>'cart.clear', 'uses'=>'CartController@clear']);
 	Route::post('total', ['as'=>'cart.total', 'uses'=>'CartController@total']);
 });
-<<<<<<< HEAD
+
 Route::post('cart/store', function(){
 	return response()->json(['Hello'], 200);
 });
@@ -81,8 +81,3 @@ Route::post('cart/store', function(){
 Route::get('budget', function(){
 	return view('content.budget');
 });
-=======
-
-
-
->>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc
