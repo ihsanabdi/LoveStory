@@ -36,9 +36,9 @@
                     <div class="row">
                         <div class="span4">
                             <a href="#" class="btn btn-block banner" style="background-image: linear-gradient(to bottom, #EEB702, #D29F0C)">
-                                <span class="title">FREE</span>
+                                <span class="title">Konsultasi Pernikahan</span>
                               
-                                <em style="color: #fff">Konsultasi Pernikahan</em>
+                                <em style="color: #fff">Pra Nikah - Pasca Nikah</em>
                             </a>
                         </div>
                         <div class="span4">

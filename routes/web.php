@@ -34,6 +34,22 @@ Route::get('jenis-vendor', 'JenisVendorController@index')->name('jenis-vendor');
 
 Route::get('paket/{params}', ['as'=>'paket.show', 'uses'=>'PaketController@show']);
 
+Route::get('paket-eksekutif', function(){
+	return view('content.paket-eksekutif');
+});
+
+Route::get('paket-silver', function(){
+	return view('content.paket-silver');
+});
+
+Route::get('paket-medium', function(){
+	return view('content.paket-medium');
+});
+
+Route::get('paket-bronze', function(){
+	return view('content.paket-bronze');
+});
+
 Route::get('gallery', function(){
 	return view('content.gallery');
 })->name('gallery');
@@ -57,6 +73,16 @@ Route::group(['prefix' => 'cart'], function(){
 	Route::post('clear', ['as'=>'cart.clear', 'uses'=>'CartController@clear']);
 	Route::post('total', ['as'=>'cart.total', 'uses'=>'CartController@total']);
 });
+<<<<<<< HEAD
+Route::post('cart/store', function(){
+	return response()->json(['Hello'], 200);
+});
+
+Route::get('budget', function(){
+	return view('content.budget');
+});
+=======
 
 
 
+>>>>>>> d7e7c63ddbf7cb3e17c24007824f478501bf47cc

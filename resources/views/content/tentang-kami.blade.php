@@ -38,7 +38,7 @@
                 <div class="span12">
                     <div class="title-area">
                         <h1 class="inline"><span class="light">Love</span> Story</h1>
-                        <h2 class="inline tagline">- Your Best Companion</h2>
+                        <h2 class="inline tagline">- A Great Family Starts Hear</h2>
                     </div>
                 </div>
 
@@ -84,12 +84,8 @@
                     <!--  = Twitter Widget =  -->
                     <!--  ==========  -->
                     <div class="sidebar-item widget_twitter">
-                        <div class="underlined">
-                            <h3><span class="light">Twitter</span> Feed</h3>
-                        </div>
-
-                        <a class="twitter-timeline"  href="https://twitter.com/primozcigler"  data-widget-id="361435057526800385">Tweets by @primozcigler</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                     
+                        
 
                     </div>
 
